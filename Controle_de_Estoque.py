@@ -1,3 +1,4 @@
+from ctypes import _NamedFuncPointer
 import tkinter as tk
 from tkinter import ttk
 from datetime import datetime, timedelta
@@ -51,8 +52,7 @@ class App:
         for index, row in dados_exemplo[dados_exemplo["Dias até Vencimento"] <= 7].iterrows():
             print(f"Produto: {row['Produto']} | Vencimento: {row['Vencimento'].strftime('%d/%m/%Y')} | Responsável: {row['Responsável']} | Dias até Vencimento: {row['Dias até Vencimento']}")
 
-if _name_ == "_main_":
+if _NamedFuncPointer == "_main_":
     root = tk.Tk()
     app = App(root)
     root.mainloop()
-    
